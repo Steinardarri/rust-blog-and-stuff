@@ -5,7 +5,7 @@ This is my personal website I built using [Yew](https://yew.rs/) and [preline](h
 
 [Preview](https://steinardth.xyz)
 
-I used [maxjmohr's](https://github.com/maxjmohr/personal_website) project as a template
+I used [Max Mohr's](https://github.com/maxjmohr/personal_website) amazing website as a template
 
 ## How to run
 
