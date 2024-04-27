@@ -10,6 +10,9 @@ serde = { version = "1.0.197", features = ["derive"] }
 serde_yaml = "0.9.32"
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
 
+[dev-dependencies]
+wasm-bindgen-test = "0.2"
+
 [profile.release]
 # Less code to include into binary
 panic = 'abort'

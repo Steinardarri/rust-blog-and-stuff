@@ -1,21 +1,23 @@
-# My personal blog written using [Rust](https://www.rust-lang.org/)!
+# My personal blog written using [Rust](https://www.rust-lang.org)!
 
-This is my personal website I built using [Yew](https://yew.rs/) and [preline](https://preline.co)
----
-
-[Preview](https://steinardth.xyz)
+This is my personal website I built using [Yew](https://yew.rs) and [Preline](https://preline.co)
 
 I used [Max Mohr's](https://github.com/maxjmohr/personal_website) amazing website as a template
 
 ## How to run
 
+### Quick install if on Linux:
+run `build_release.sh`
+
+---
+
 We will need the standard [Rust toolchain](https://www.rust-lang.org/learn/get-started), including `rustup`, `rustc` and `cargo`
 
-Yew uses WebAssembly and needs Rust to have it's target
+Yew uses [WebAssembly](https://webassembly.org) and needs Rust to have it's target
 
 `rustup target add wasm32-unknown-unknown`
 
-We also need the wasm-opt package
+We also need the wasm-opt package to optimizes our WebAssembly modules
 
 `cargo install wasm-opt`
 
@@ -31,7 +33,7 @@ or
 
 `trunk serve`
 
-and open your browser on [http://localhost:8008/](http://localhost:8008/)
+and open your browser on [http://localhost:8008](http://localhost:8008)
 
 To build for release
 
@@ -39,14 +41,19 @@ To build for release
 
 ## Preline & Tailwind
 
-This website uses Tailwind to manage styles
+This website uses Preline to manage styles
 
 To install, we will need [Node.js](https://nodejs.org/en/download) to use it's package manager
 
 First we get Tailwind itself
 
 `npm install -D tailwindcss`
+
+`npm install -D @tailwindcss/forms`
+
 `npm install tailwind-typewriter`
 
 then we set up Preline to manage it
+
+`npm install preline`
 

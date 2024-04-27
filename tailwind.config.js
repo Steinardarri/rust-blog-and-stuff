@@ -2,13 +2,25 @@ const fs = require('fs');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: {
-    files: ['./**/*.{html,md,rs,yaml}']
-  },
+  // configure the paths to all of your source files
+  content: { files: [
+    'node_modules/preline/dist/*.js',
+    './**/*.{html,md,rs,yaml}',
+  ]},
+
+  // enable dark mode via class strategy
+  darkMode: 'class',
+
   theme: {
-    extend: {},
+    extend: {
+      // extend base Tailwind CSS utility classes
+    },
   },
+
+  // add plugins to your Tailwind CSS project
   plugins: [
+    require('@tailwindcss/forms'),
+    require('preline/plugin'),
     require('tailwind-typewriter')({
         wordsets: {
             aboutme: {
