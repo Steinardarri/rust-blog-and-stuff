@@ -7,6 +7,11 @@ module.exports = {
     './**/*.{html,md,rs,yaml}',
   ]},
   theme: {
+    fontFamily: {
+      sans: ['Prompt', 'sans-serif'],
+      serif: ['Lustria', 'Yrsa', 'serif'],
+      mono: ['Hack', 'monospace'],
+    },
     extend: {
       // extend base Tailwind CSS utility classes
     },

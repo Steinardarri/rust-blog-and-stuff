@@ -2,7 +2,7 @@
 
 This is my personal website I built using [Yew](https://yew.rs) and [TailwindCSS](https://tailwindcss.com/)
 
-I used [Max Mohr's](https://github.com/maxjmohr/personal_website) amazing website as a template
+I used [Max Mohr's](https://github.com/maxjmohr/personal_website) amazing website project as a template
 
 ## How to run
 

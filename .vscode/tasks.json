@@ -20,9 +20,9 @@
           "isDefault": true
         },
         // Try start the task on folder open
-        "runOptions": {
+/*         "runOptions": {
           "runOn": "folderOpen"
-        }
+        } */
       },
       {
         // The name that shows up in terminal tab

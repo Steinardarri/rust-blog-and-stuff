@@ -70,7 +70,7 @@ fn app() -> Html {
 
         // Main content
         // About me
-        <div id="aboutme" class="flex flex-col justify-center bg-gradient-to-b from-stone-300 to-gray-300 dark:from-stone-600 dark:to-gray-700
+        <div id="aboutme" class="flex flex-col justify-center bg-gradient-to-b from-fuchsia-300 to-violet-300 dark:from-fuchsia-600 dark:to-violet-700
         pl-12 lg:pl-44 pr-20 w-full h-full">
             <h1 class="text-9xl lg:text-8xl manual_h1 mb-4">{"Steinar Darri Þorgilsson"}</h1>
             <div class="flex mb-6">
@@ -90,11 +90,11 @@ fn app() -> Html {
                     </svg>
                 </a>
             </div>
-            <span class="type-aboutme antialiased text-5xl lg:text-3xl font-medium leading-snug tracking-normal text-wrap text-stone-600 dark:text-neutral-300 leading-tight lg:leading-snug"></span>
+            <span class="type-aboutme font-mono antialiased text-5xl lg:text-3xl font-medium leading-snug tracking-normal text-wrap text-stone-600 dark:text-neutral-300 leading-tight lg:leading-snug"></span>
         </div>
 
         // Professional experience
-        <div id="profexper" class="bg-gradient-to-b from-gray-300 to-green-100 dark:from-gray-700 dark:to-emerald-900
+        <div id="profexper" class="bg-gradient-to-b from-violet-300 to-green-100 dark:from-violet-700 dark:to-emerald-900
         pt-28 pb-10 pl-12 lg:pl-44 pr-20">
             <h1 class="text-8xl lg:text-7xl manual_h1" data-aos="fade">{"Professional experience"}</h1>
             { for content_profexper_timeline.iter().cloned() }

@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -46,7 +46,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Prompt, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -135,7 +135,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Hack, monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -211,6 +211,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -234,9 +236,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -492,6 +494,10 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop {
@@ -542,6 +548,10 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .container {
@@ -644,10 +654,6 @@ video {
 
 .m-2 {
   margin: 0.5rem;
-}
-
-.m-6 {
-  margin: 1.5rem;
 }
 
 .-mx-6 {
@@ -1126,6 +1132,21 @@ video {
   border-style: hidden;
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
+.bg-fuchsia-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 171 252 / var(--tw-bg-opacity));
+}
+
 .bg-stone-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(214 211 209 / var(--tw-bg-opacity));
@@ -1154,9 +1175,9 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-gray-300 {
-  --tw-gradient-from: #d1d5db var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(209 213 219 / 0) var(--tw-gradient-to-position);
+.from-fuchsia-300 {
+  --tw-gradient-from: #f0abfc var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(240 171 252 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1166,30 +1187,20 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-indigo-300 {
-  --tw-gradient-from: #a5b4fc var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(165 180 252 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-stone-300 {
-  --tw-gradient-from: #d6d3d1 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(214 211 209 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-teal-200 {
   --tw-gradient-from: #99f6e4 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(153 246 228 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.to-cyan-200 {
-  --tw-gradient-to: #a5f3fc var(--tw-gradient-to-position);
+.from-violet-300 {
+  --tw-gradient-from: #c4b5fd var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(196 181 253 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.to-gray-300 {
-  --tw-gradient-to: #d1d5db var(--tw-gradient-to-position);
+.to-cyan-200 {
+  --tw-gradient-to: #a5f3fc var(--tw-gradient-to-position);
 }
 
 .to-green-100 {
@@ -1200,12 +1211,12 @@ video {
   --tw-gradient-to: #a5b4fc var(--tw-gradient-to-position);
 }
 
-.to-stone-300 {
-  --tw-gradient-to: #d6d3d1 var(--tw-gradient-to-position);
-}
-
 .to-teal-200 {
   --tw-gradient-to: #99f6e4 var(--tw-gradient-to-position);
+}
+
+.to-violet-300 {
+  --tw-gradient-to: #c4b5fd var(--tw-gradient-to-position);
 }
 
 .decoration-slice {
@@ -1247,6 +1258,10 @@ video {
      object-fit: scale-down;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1255,6 +1270,11 @@ video {
 .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-2 {
@@ -1343,8 +1363,12 @@ video {
   vertical-align: super;
 }
 
+.font-mono {
+  font-family: Hack, monospace;
+}
+
 .font-sans {
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Prompt, sans-serif;
 }
 
 .text-3xl {
@@ -1380,6 +1404,11 @@ video {
 .text-9xl {
   font-size: 8rem;
   line-height: 1;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-lg {
@@ -1558,6 +1587,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -1571,6 +1605,11 @@ video {
 .text-stone-600 {
   --tw-text-opacity: 1;
   color: rgb(87 83 78 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-opacity-90 {
@@ -1592,6 +1631,10 @@ video {
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.mix-blend-plus-darker {
+  mix-blend-mode: plus-darker;
 }
 
 .mix-blend-plus-lighter {
@@ -1711,801 +1754,649 @@ video {
   }
 }
 
-@keyframes blink-caret-langs {
-  from, to {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: currentColor;
-  }
-}
-
 @keyframes write-aboutme {
   from {
     content: "";
   }
 
   to {
-    content: "Hey, I'm Max. I am currently studying data science in Tübingen and working at BearingPoint in data analytics & engineering.";
+    content: "Halló og velkomin á heimasíðuna mína. Ég er útskrifaður tölvunarfræðingur hjá Háskóla Íslands og er starfandi sem hugbúnaðarverkfræðingur hjá Brennisteinn ehf.";
   }
 
-  0.91% {
+  0.54% {
     content: "H";
   }
 
-  1.44% {
-    content: "He";
+  1.56% {
+    content: "Ha";
   }
 
   2% {
-    content: "Hey";
+    content: "Hal";
   }
 
-  2.42% {
-    content: "Hey,";
+  1.82% {
+    content: "Hall";
   }
 
-  3.63% {
-    content: "Hey, ";
+  2.7% {
+    content: "Hall\F3";
   }
 
-  4.49% {
-    content: "Hey, I";
+  3.21% {
+    content: "Hall\F3  ";
   }
 
-  5.26% {
-    content: "Hey, I'";
+  4.29% {
+    content: "Hall\F3  o";
   }
 
-  5.97% {
-    content: "Hey, I'm";
-  }
-
-  6.39% {
-    content: "Hey, I'm ";
-  }
-
-  7.21% {
-    content: "Hey, I'm M";
-  }
-
-  8.03% {
-    content: "Hey, I'm Ma";
-  }
-
-  8.78% {
-    content: "Hey, I'm Max";
-  }
-
-  9.09% {
-    content: "Hey, I'm Max.";
-  }
-
-  9.3% {
-    content: "Hey, I'm Max. ";
-  }
-
-  10.72% {
-    content: "Hey, I'm Max. I";
-  }
-
-  11.52% {
-    content: "Hey, I'm Max. I ";
-  }
-
-  11.66% {
-    content: "Hey, I'm Max. I a";
-  }
-
-  12.52% {
-    content: "Hey, I'm Max. I am";
-  }
-
-  13.76% {
-    content: "Hey, I'm Max. I am ";
-  }
-
-  14.16% {
-    content: "Hey, I'm Max. I am c";
-  }
-
-  14.52% {
-    content: "Hey, I'm Max. I am cu";
-  }
-
-  15.15% {
-    content: "Hey, I'm Max. I am cur";
-  }
-
-  15.91% {
-    content: "Hey, I'm Max. I am curr";
-  }
-
-  16.57% {
-    content: "Hey, I'm Max. I am curre";
-  }
-
-  17.38% {
-    content: "Hey, I'm Max. I am curren";
-  }
-
-  17.94% {
-    content: "Hey, I'm Max. I am current";
-  }
-
-  19.08% {
-    content: "Hey, I'm Max. I am currentl";
-  }
-
-  19.42% {
-    content: "Hey, I'm Max. I am currently";
-  }
-
-  20.1% {
-    content: "Hey, I'm Max. I am currently ";
-  }
-
-  20.65% {
-    content: "Hey, I'm Max. I am currently s";
-  }
-
-  21.68% {
-    content: "Hey, I'm Max. I am currently st";
-  }
-
-  22.7% {
-    content: "Hey, I'm Max. I am currently stu";
-  }
-
-  23.34% {
-    content: "Hey, I'm Max. I am currently stud";
-  }
-
-  23.87% {
-    content: "Hey, I'm Max. I am currently study";
-  }
-
-  24.87% {
-    content: "Hey, I'm Max. I am currently studyi";
-  }
-
-  25.66% {
-    content: "Hey, I'm Max. I am currently studyin";
-  }
-
-  26.12% {
-    content: "Hey, I'm Max. I am currently studying";
-  }
-
-  27.01% {
-    content: "Hey, I'm Max. I am currently studying ";
-  }
-
-  27.45% {
-    content: "Hey, I'm Max. I am currently studying d";
-  }
-
-  27.52% {
-    content: "Hey, I'm Max. I am currently studying da";
-  }
-
-  28.75% {
-    content: "Hey, I'm Max. I am currently studying dat";
-  }
-
-  29.87% {
-    content: "Hey, I'm Max. I am currently studying data";
-  }
-
-  29.75% {
-    content: "Hey, I'm Max. I am currently studying data ";
-  }
-
-  30.61% {
-    content: "Hey, I'm Max. I am currently studying data s";
-  }
-
-  31.52% {
-    content: "Hey, I'm Max. I am currently studying data sc";
-  }
-
-  32.29% {
-    content: "Hey, I'm Max. I am currently studying data sci";
-  }
-
-  32.37% {
-    content: "Hey, I'm Max. I am currently studying data scie";
-  }
-
-  33.93% {
-    content: "Hey, I'm Max. I am currently studying data scien";
-  }
-
-  33.96% {
-    content: "Hey, I'm Max. I am currently studying data scienc";
-  }
-
-  34.72% {
-    content: "Hey, I'm Max. I am currently studying data science";
-  }
-
-  35.45% {
-    content: "Hey, I'm Max. I am currently studying data science ";
-  }
-
-  36.13% {
-    content: "Hey, I'm Max. I am currently studying data science i";
-  }
-
-  36.64% {
-    content: "Hey, I'm Max. I am currently studying data science in";
-  }
-
-  37.76% {
-    content: "Hey, I'm Max. I am currently studying data science in ";
-  }
-
-  38.44% {
-    content: "Hey, I'm Max. I am currently studying data science in T";
-  }
-
-  39.18% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC";
-  }
-
-  40% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC b";
-  }
-
-  40.15% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bi";
-  }
-
-  41.73% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bin";
-  }
-
-  42.37% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bing";
-  }
-
-  42.81% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC binge";
-  }
-
-  43.34% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen";
-  }
-
-  43.62% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen ";
-  }
-
-  44.64% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen a";
-  }
-
-  45.93% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen an";
-  }
-
-  46.16% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and";
-  }
-
-  47.11% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and ";
-  }
-
-  47.79% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and w";
-  }
-
-  48.05% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and wo";
-  }
-
-  48.87% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and wor";
-  }
-
-  49.5% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and work";
-  }
-
-  50.27% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and worki";
-  }
-
-  51.23% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and workin";
-  }
-
-  51.57% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working";
-  }
-
-  52.35% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working ";
-  }
-
-  53.26% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working a";
-  }
-
-  54.03% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at";
-  }
-
-  54.86% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at ";
-  }
-
-  55.65% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at B";
-  }
-
-  55.69% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at Be";
-  }
-
-  56.56% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at Bea";
-  }
-
-  57.67% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at Bear";
-  }
-
-  58.29% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at Beari";
-  }
-
-  58.53% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at Bearin";
-  }
-
-  59.21% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at Bearing";
-  }
-
-  59.93% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingP";
-  }
-
-  60.61% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPo";
-  }
-
-  61.18% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoi";
-  }
-
-  62.12% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoin";
-  }
-
-  63.38% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint";
-  }
-
-  63.14% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint ";
-  }
-
-  64.46% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint i";
-  }
-
-  64.63% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in";
-  }
-
-  65.78% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in ";
-  }
-
-  66.75% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in d";
-  }
-
-  67.21% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in da";
-  }
-
-  67.43% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in dat";
-  }
-
-  68.88% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data";
-  }
-
-  69.47% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data ";
-  }
-
-  69.85% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data a";
-  }
-
-  70.16% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data an";
-  }
-
-  71.69% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data ana";
-  }
-
-  72.12% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data anal";
-  }
-
-  72.74% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analy";
-  }
-
-  73.87% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analyti";
-  }
-
-  74.38% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytic";
-  }
-
-  75.39% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics";
-  }
-
-  76.23% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics ";
-  }
-
-  76.48% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics &";
-  }
-
-  77.17% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & ";
-  }
-
-  78.78% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & e";
-  }
-
-  78.57% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & en";
-  }
-
-  79.49% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & eng";
-  }
-
-  80.87% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & engi";
-  }
-
-  80.9% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & engin";
-  }
-
-  82.32% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & engine";
-  }
-
-  82.14% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & enginee";
-  }
-
-  83.51% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & engineer";
-  }
-
-  83.64% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & engineeri";
-  }
-
-  84.24% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & engineerin";
-  }
-
-  85% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & engineering";
-  }
-
-  86.37%, 100.35% {
-    content: "Hey, I'm Max. I am currently studying data science in T\FC bingen and working at BearingPoint in data analytics & engineering.";
-  }
-}
-
-@keyframes write-langs {
-  from {
-    content: "";
-  }
-
-  to {
-    content: "";
-  }
-
-  0.75% {
-    content: "\E9";
-  }
-
-  1.71% {
-    content: "\E9t";
-  }
-
-  2.35% {
-    content: "\E9t ";
-  }
-
-  3.49% {
-    content: "\E9t u";
-  }
-
-  3.8% {
-    content: "\E9t un";
+  4.74% {
+    content: "Hall\F3  og";
   }
 
   4.68% {
-    content: "\E9t un ";
+    content: "Hall\F3  og ";
   }
 
-  5.26% {
-    content: "\E9t un p";
+  5.77% {
+    content: "Hall\F3  og v";
   }
 
-  5.9% {
-    content: "\E9t un pe";
+  5.67% {
+    content: "Hall\F3  og ve";
   }
 
-  7.06% {
-    content: "\E9t un peu";
+  6.65% {
+    content: "Hall\F3  og vel";
   }
 
-  7.3% {
-    content: "\E9t un peu.";
+  6.92% {
+    content: "Hall\F3  og velk";
   }
 
-  8.37% {
-    content: "\E9t un peu..";
+  7.86% {
+    content: "Hall\F3  og velko";
   }
 
-  9.27%, 24.65% {
-    content: "\E9t un peu...";
+  8.24% {
+    content: "Hall\F3  og velkom";
   }
 
-  25.42% {
-    content: "\E9t un peu..";
+  8.74% {
+    content: "Hall\F3  og velkomi";
   }
 
-  26.19% {
-    content: "\E9t un peu.";
+  9.77% {
+    content: "Hall\F3  og velkomin";
   }
 
-  26.96% {
-    content: "\E9t un peu";
+  9.93% {
+    content: "Hall\F3  og velkomin ";
   }
 
-  27.73% {
-    content: "\E9t un pe";
+  10.28% {
+    content: "Hall\F3  og velkomin \E1";
   }
 
-  28.5% {
-    content: "\E9t un p";
+  11.51% {
+    content: "Hall\F3  og velkomin \E1  ";
   }
 
-  29.27% {
-    content: "\E9t un ";
+  11.66% {
+    content: "Hall\F3  og velkomin \E1  h";
   }
 
-  30.03% {
-    content: "\E9t un";
+  12.57% {
+    content: "Hall\F3  og velkomin \E1  he";
   }
 
-  30.8% {
-    content: "\E9t u";
+  12.45% {
+    content: "Hall\F3  og velkomin \E1  hei";
   }
 
-  31.57% {
-    content: "\E9t ";
+  13.63% {
+    content: "Hall\F3  og velkomin \E1  heim";
   }
 
-  32.34% {
-    content: "\E9t";
+  13.87% {
+    content: "Hall\F3  og velkomin \E1  heima";
   }
 
-  33.11% {
-    content: "\E9";
+  14.79% {
+    content: "Hall\F3  og velkomin \E1  heimas";
   }
 
-  33.88% {
-    content: "";
+  14.74% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED";
   }
 
-  35.05% {
-    content: "e";
+  16.13% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0";
   }
 
-  35.5% {
-    content: "e ";
+  16.6% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0u";
   }
 
-  36.24% {
-    content: "e u";
+  16.46% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0un";
   }
 
-  36.55% {
-    content: "e un";
+  17.13% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una";
   }
 
-  37.51% {
-    content: "e un ";
+  18.12% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una ";
   }
 
-  38.89% {
-    content: "e un p";
+  18.35% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m";
   }
 
-  38.82% {
-    content: "e un po";
+  19.49% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\ED";
   }
 
-  40.4% {
-    content: "e un po'";
+  19.57% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDn";
   }
 
-  40.44% {
-    content: "e un po'.";
+  20.05% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna";
   }
 
-  41.61% {
-    content: "e un po'..";
+  20.48% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna.";
   }
 
-  42.34%, 57.72% {
-    content: "e un po'...";
+  20.92% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. ";
   }
 
-  58.49% {
-    content: "e un po'..";
+  21.91% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9";
   }
 
-  59.26% {
-    content: "e un po'.";
+  22.41% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g";
   }
 
-  60.03% {
-    content: "e un po'";
+  23.07% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g ";
   }
 
-  60.8% {
-    content: "e un po";
+  23.78% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g e";
   }
 
-  61.57% {
-    content: "e un p";
+  24.36% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er";
   }
 
-  62.34% {
-    content: "e un ";
+  24.9% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er ";
   }
 
-  63.1% {
-    content: "e un";
+  25.34% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FA";
   }
 
-  63.87% {
-    content: "e u";
+  25.66% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAt";
   }
 
-  64.64% {
-    content: "e ";
+  26.18% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAts";
   }
 
-  65.41% {
-    content: "e";
+  27.05% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtsk";
   }
 
-  66.18% {
-    content: "";
+  27.68% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskr";
   }
 
-  67.01% {
-    content: "y";
+  27.53% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskri";
   }
 
-  67.8% {
-    content: "y ";
+  28.25% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrif";
   }
 
-  68.83% {
-    content: "y u";
+  28.79% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa";
   }
 
-  68.99% {
-    content: "y un";
+  30.02% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0";
   }
 
-  69.65% {
-    content: "y un ";
+  30.53% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0u";
   }
 
-  70.72% {
-    content: "y un p";
+  30.67% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur";
   }
 
-  71.63% {
-    content: "y un po";
+  31.59% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur ";
   }
 
-  71.99% {
-    content: "y un poc";
+  31.96% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t";
   }
 
-  72.87% {
-    content: "y un poco";
+  32.05% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6";
   }
 
-  73.68% {
-    content: "y un poco.";
+  32.98% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6l";
   }
 
-  74.35% {
-    content: "y un poco..";
+  33.71% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lv";
   }
 
-  75.4%, 90.78% {
-    content: "y un poco...";
+  34.4% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvu";
   }
 
-  91.55% {
-    content: "y un poco..";
+  34.97% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvun";
   }
 
-  92.32% {
-    content: "y un poco.";
+  34.96% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvuna";
   }
 
-  93.09% {
-    content: "y un poco";
+  36.1% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunar";
   }
 
-  93.86% {
-    content: "y un poc";
+  36.61% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarf";
   }
 
-  94.63% {
-    content: "y un po";
+  37.37% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr";
   }
 
-  95.4% {
-    content: "y un p";
+  37.82% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6";
   }
 
-  96.16% {
-    content: "y un ";
+  38.35% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0";
   }
 
-  96.93% {
-    content: "y un";
+  38.99% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0i";
   }
 
-  97.7% {
-    content: "y u";
+  39.34% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0in";
   }
 
-  98.47% {
-    content: "y ";
+  39.65% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ing";
   }
 
-  99.24% {
-    content: "y";
+  40.62% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingu";
   }
 
-  100.01% {
-    content: "";
+  41.02% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur";
+  }
+
+  41.79% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur ";
+  }
+
+  41.48% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur h";
+  }
+
+  42.4% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj";
+  }
+
+  43.11% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1";
+  }
+
+  43.25% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  ";
+  }
+
+  44.59% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H";
+  }
+
+  44.61% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1";
+  }
+
+  45.7% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1s";
+  }
+
+  45.99% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk";
+  }
+
+  46.67% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3";
+  }
+
+  47.31% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3l";
+  }
+
+  47.32% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la";
+  }
+
+  48.29% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la ";
+  }
+
+  48.77% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CD";
+  }
+
+  49.06% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDs";
+  }
+
+  49.32% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDsl";
+  }
+
+  50.74% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDsla";
+  }
+
+  51.26% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslan";
+  }
+
+  51.25% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDsland";
+  }
+
+  52.05% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands";
+  }
+
+  52.98% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands ";
+  }
+
+  52.77% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands o";
+  }
+
+  53.83% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og";
+  }
+
+  54.64% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og ";
+  }
+
+  55.02% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og e";
+  }
+
+  55.49% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er";
+  }
+
+  55.88% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er ";
+  }
+
+  56.12% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er s";
+  }
+
+  57.21% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er st";
+  }
+
+  57.84% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er sta";
+  }
+
+  57.78% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er star";
+  }
+
+  58.16% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starf";
+  }
+
+  59.2% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfa";
+  }
+
+  59.7% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfan";
+  }
+
+  60.13% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfand";
+  }
+
+  61% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi";
+  }
+
+  61.15% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi ";
+  }
+
+  62.47% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi s";
+  }
+
+  62.54% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi se";
+  }
+
+  62.81% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem";
+  }
+
+  64.01% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem ";
+  }
+
+  64.51% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem h";
+  }
+
+  64.46% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hu";
+  }
+
+  64.92% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hug";
+  }
+
+  65.49% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb";
+  }
+
+  66.11% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FA";
+  }
+
+  67.1% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAn";
+  }
+
+  67.24% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna";
+  }
+
+  67.95% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0";
+  }
+
+  68.59% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 a";
+  }
+
+  69.64% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 ar";
+  }
+
+  69.72% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arv";
+  }
+
+  70.21% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arve";
+  }
+
+  71.12% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arver";
+  }
+
+  71.52% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverk";
+  }
+
+  72% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkf";
+  }
+
+  72.18% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr";
+  }
+
+  72.81% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6";
+  }
+
+  73.3% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0";
+  }
+
+  74.14% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0i";
+  }
+
+  75.16% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0in";
+  }
+
+  75.17% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ing";
+  }
+
+  75.69% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingu";
+  }
+
+  76.39% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur";
+  }
+
+  77% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur ";
+  }
+
+  78.08% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur h";
+  }
+
+  77.87% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj";
+  }
+
+  79.22% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1";
+  }
+
+  79.18% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  ";
+  }
+
+  79.76% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  B";
+  }
+
+  80.3% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Br";
+  }
+
+  80.85% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Bre";
+  }
+
+  81.86% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Bren";
+  }
+
+  81.79% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brenn";
+  }
+
+  83.14% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brenni";
+  }
+
+  83.12% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brennis";
+  }
+
+  84.15% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brennist";
+  }
+
+  84.09% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brenniste";
+  }
+
+  85.11% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brennistei";
+  }
+
+  85.58% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brennistein";
+  }
+
+  86.25% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brennisteinn";
+  }
+
+  86.93% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brennisteinn ";
+  }
+
+  86.86% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brennisteinn e";
+  }
+
+  87.5% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brennisteinn eh";
+  }
+
+  88.01% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brennisteinn ehf";
+  }
+
+  88.71%, 99.88% {
+    content: "Hall\F3  og velkomin \E1  heimas\ED\F0una m\EDna. \C9g er \FAtskrifa\F0ur t\F6lvunarfr\E6\F0ingur hj\E1  H\E1sk\F3la \CDslands og er starfandi sem hugb\FAna\F0 arverkfr\E6\F0ingur hj\E1  Brennisteinn ehf.";
   }
 }
 
@@ -2513,15 +2404,7 @@ video {
   content: "";
   border-right: 3px solid currentColor;
   padding-right: 0.1em;
-  animation: blink-caret-aboutme 0.8s infinite, write-aboutme 7.15s 1s 1 forwards;
-  transition: border-color 50ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.type-langs::after {
-  content: "";
-  border-right: 3px solid currentColor;
-  padding-right: 0.1em;
-  animation: blink-caret-langs 0.8s infinite, write-langs 6.500000000000001s 1s infinite forwards;
+  animation: blink-caret-aboutme 0.8s infinite, write-aboutme 8.95s 1s 1 forwards;
   transition: border-color 50ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -2536,11 +2419,11 @@ body {
   padding: 0;
   height: 100%;
   scroll-behavior: smooth;
-  font-family: "Roboto", sans-serif;
 }
 
 .manual_h1 {
   margin-bottom: 1.5rem;
+  font-family: Lustria, Yrsa, serif;
   font-weight: 800;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -2557,6 +2440,7 @@ body {
 
 .manual_p {
   text-wrap: wrap;
+  font-family: Prompt, sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 500;
@@ -2570,419 +2454,6 @@ body {
 
 @media (prefers-color-scheme: dark) {
   .manual_p {
-    --tw-text-opacity: 1;
-    color: rgb(212 212 212 / var(--tw-text-opacity));
-  }
-}
-
-/* Sidebar */
-
-.sidebar {
-  position: fixed;
-  top: 50%;
-  left: 1rem;
-  z-index: 50;
-  display: flex;
-  height: auto;
-  width: 7rem;
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  flex-direction: column;
-  align-items: center;
-  border-radius: 1.5rem;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.2;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  --tw-backdrop-blur: blur(16px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-@media (prefers-color-scheme: dark) {
-  .sidebar {
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-    --tw-bg-opacity: 0.25;
-  }
-}
-
-.sidebar:hover {
-  width: 21rem;
-  transition-duration: 300ms;
-}
-
-.sidebar_links {
-  height: -moz-max-content;
-  height: max-content;
-  list-style-type: none;
-  overflow-y: hidden;
-}
-
-.sidebar_links::-webkit-scrollbar {
-  display: none;
-}
-
-.sidebar_links li:hover {
-  width: 20rem;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.8;
-}
-
-@media (prefers-color-scheme: dark) {
-  .sidebar_links li:hover {
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-    --tw-bg-opacity: 0.25;
-  }
-}
-
-.sidebar_svg {
-  display: flex;
-  height: 4rem;
-  width: 4rem;
-  fill: #374151;
-  padding: 0.5rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .sidebar_svg {
-    fill: #e7e5e4;
-  }
-}
-
-.sidebar_span {
-  padding-left: 0.25rem;
-  vertical-align: middle;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@media (prefers-color-scheme: dark) {
-  .sidebar_span {
-    --tw-text-opacity: 1;
-    color: rgb(231 229 228 / var(--tw-text-opacity));
-  }
-}
-
-/* Bottombar */
-
-.bottombar {
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 50;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  margin-bottom: 3rem;
-  display: flex;
-  height: 8rem;
-  width: auto;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.5rem;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.2;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  --tw-backdrop-blur: blur(16px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-@media (prefers-color-scheme: dark) {
-  .bottombar {
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-    --tw-bg-opacity: 0.25;
-  }
-}
-
-.bottombar_svg {
-  display: flex;
-  height: 5rem;
-  width: 5rem;
-  fill: #374151;
-  padding: 0.5rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .bottombar_svg {
-    fill: #e7e5e4;
-  }
-}
-
-.bottombar_span {
-  padding-top: 0.25rem;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@media (prefers-color-scheme: dark) {
-  .bottombar_span {
-    --tw-text-opacity: 1;
-    color: rgb(231 229 228 / var(--tw-text-opacity));
-  }
-}
-
-/*Content specific classes*/
-
-.list_icons {
-  margin-top: 0.25rem;
-  height: 2rem;
-  width: 2rem;
-  flex-shrink: 0;
-  color: rgb(87 83 78 / var(--tw-text-opacity));
-  --tw-text-opacity: 0.95;
-}
-
-@media (min-width: 1024px) {
-  .list_icons {
-    height: 1.25rem;
-    width: 1.25rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .list_icons {
-    color: rgb(212 212 212 / var(--tw-text-opacity));
-    --tw-text-opacity: 0.95;
-  }
-}
-
-.timeline_title {
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-  display: inline-block;
-  font-size: 3.75rem;
-  line-height: 1;
-  font-weight: 600;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-  --tw-text-opacity: 0.9;
-}
-
-@media (min-width: 1024px) {
-  .timeline_title {
-    margin-top: 0px;
-    margin-bottom: 0.25rem;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .timeline_title {
-    color: rgb(231 229 228 / var(--tw-text-opacity));
-    --tw-text-opacity: 0.9;
-  }
-}
-
-.timeline_time {
-  left: 0px;
-  margin-top: 0px;
-  display: inline-flex;
-  height: 2.5rem;
-  width: 21rem;
-  --tw-translate-y: 0.125rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  align-items: center;
-  justify-content: center;
-  border-radius: 1rem;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.5;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgb(87 83 78 / var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px) {
-  .timeline_time {
-    position: absolute;
-    height: 1.5rem;
-    width: 10rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .timeline_time {
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-    --tw-bg-opacity: 0.25;
-    --tw-text-opacity: 1;
-    color: rgb(212 212 212 / var(--tw-text-opacity));
-  }
-}
-
-.timeline_desc {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(87 83 78 / var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px) {
-  .timeline_desc {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .timeline_desc {
-    --tw-text-opacity: 1;
-    color: rgb(212 212 212 / var(--tw-text-opacity));
-  }
-}
-
-.timeline_skills {
-  margin-right: 0.75rem;
-  margin-bottom: 0.75rem;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  border-radius: 0.375rem;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.5;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  text-align: center;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgb(87 83 78 / var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px) {
-  .timeline_skills {
-    margin-right: 0.25rem;
-    margin-bottom: 0.25rem;
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .timeline_skills {
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-    --tw-bg-opacity: 0.25;
-    --tw-text-opacity: 1;
-    color: rgb(212 212 212 / var(--tw-text-opacity));
-  }
-}
-
-.langs_flag {
-  height: 8rem;
-  width: 10rem;
-  border-radius: 0.5rem;
-  --tw-contrast: contrast(.75);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (min-width: 1024px) {
-  .langs_flag {
-    --tw-contrast: contrast(.5);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-  }
-
-  .group:hover .langs_flag {
-    --tw-contrast: contrast(1);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-  }
-}
-
-.langs_title {
-  margin-top: 0.75rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (min-width: 1024px) {
-  .langs_title {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 400;
-  }
-
-  .group:hover .langs_title {
-    font-weight: 800;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .langs_title {
-    --tw-text-opacity: 1;
-    color: rgb(231 229 228 / var(--tw-text-opacity));
-  }
-}
-
-.langs_level {
-  text-wrap: wrap;
-  text-align: center;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-  line-height: 1.375;
-  letter-spacing: 0em;
-  --tw-text-opacity: 1;
-  color: rgb(87 83 78 / var(--tw-text-opacity));
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (min-width: 1024px) {
-  .langs_level {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 400;
-  }
-
-  .group:hover .langs_level {
-    font-weight: 700;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .langs_level {
     --tw-text-opacity: 1;
     color: rgb(212 212 212 / var(--tw-text-opacity));
   }
@@ -3550,6 +3021,16 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:bg-black {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-fuchsia-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(192 38 211 / var(--tw-bg-opacity));
+  }
+
   .dark\:bg-gray-800 {
     --tw-bg-opacity: 1;
     background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -3576,27 +3057,21 @@ body {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   }
 
-  .dark\:from-gray-700 {
-    --tw-gradient-from: #374151 var(--tw-gradient-from-position);
-    --tw-gradient-to: rgb(55 65 81 / 0) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-
-  .dark\:from-indigo-900 {
-    --tw-gradient-from: #312e81 var(--tw-gradient-from-position);
-    --tw-gradient-to: rgb(49 46 129 / 0) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-
-  .dark\:from-stone-600 {
-    --tw-gradient-from: #57534e var(--tw-gradient-from-position);
-    --tw-gradient-to: rgb(87 83 78 / 0) var(--tw-gradient-to-position);
+  .dark\:from-fuchsia-600 {
+    --tw-gradient-from: #c026d3 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(192 38 211 / 0) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   }
 
   .dark\:from-teal-800 {
     --tw-gradient-from: #115e59 var(--tw-gradient-from-position);
     --tw-gradient-to: rgb(17 94 89 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .dark\:from-violet-700 {
+    --tw-gradient-from: #6d28d9 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(109 40 217 / 0) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   }
 
@@ -3608,20 +3083,16 @@ body {
     --tw-gradient-to: #064e3b var(--tw-gradient-to-position);
   }
 
-  .dark\:to-gray-700 {
-    --tw-gradient-to: #374151 var(--tw-gradient-to-position);
-  }
-
   .dark\:to-indigo-900 {
     --tw-gradient-to: #312e81 var(--tw-gradient-to-position);
   }
 
-  .dark\:to-stone-600 {
-    --tw-gradient-to: #57534e var(--tw-gradient-to-position);
-  }
-
   .dark\:to-teal-800 {
     --tw-gradient-to: #115e59 var(--tw-gradient-to-position);
+  }
+
+  .dark\:to-violet-700 {
+    --tw-gradient-to: #6d28d9 var(--tw-gradient-to-position);
   }
 
   .dark\:fill-stone-300 {
@@ -3646,6 +3117,11 @@ body {
   .dark\:text-stone-200 {
     --tw-text-opacity: 1;
     color: rgb(231 229 228 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
   .dark\:text-opacity-90 {

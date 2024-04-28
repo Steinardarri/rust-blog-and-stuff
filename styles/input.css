@@ -12,3 +12,10 @@ body {
     height: 100%;
     scroll-behavior: smooth;
 }
+
+.manual_h1 {
+    @apply antialiased font-serif font-extrabold mb-6 text-gray-700 dark:text-stone-200;
+}
+.manual_p {
+    @apply antialiased font-sans text-3xl font-medium leading-snug tracking-normal text-wrap text-stone-600 dark:text-neutral-300;
+}
