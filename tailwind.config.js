@@ -4,7 +4,6 @@ const fs = require('fs');
 module.exports = {
   // configure the paths to all of your source files
   content: { files: [
-    'node_modules/preline/dist/*.js',
     './**/*.{html,md,rs,yaml}',
   ]},
   theme: {
@@ -15,8 +14,6 @@ module.exports = {
 
   // add plugins to your Tailwind CSS project
   plugins: [
-    require('@tailwindcss/forms'),
-    require('preline/plugin'),
     require('tailwind-typewriter')({
         wordsets: {
             aboutme: {

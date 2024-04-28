@@ -23,9 +23,7 @@ cargo binstall wasm-opt -y
 
 # Install tailwindcss and other dependencies
 npm install -D tailwindcss
-npm install -D @tailwindcss/forms
 npm install tailwind-typewriter
-npm install preline
 
 # Clean the project
 trunk clean
