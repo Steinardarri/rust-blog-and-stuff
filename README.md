@@ -51,6 +51,6 @@ After that, to install all dependencies listed in package.json
 
 To have Tailwind generate our styles we run 
 
-`npx tailwindcss -i ./styles/input.css -o ./styles/main.css --watch`
+`npm run css` listens for changes and rebuilds when found (might get an 'JavaScript heap out of memory' error during runtime)
 
---watch listens for changes and rebuilds when found
+`npm run build` builds a minimal css file

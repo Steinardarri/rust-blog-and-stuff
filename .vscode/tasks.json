@@ -43,12 +43,17 @@
         // Create the tasks in a terminal group
         "presentation": {
           "group": "my-group"
-        }
+        },
+        "icon": {
+          "id": "server-process",
+          "color": "terminal.ansiGreen"
+        },
       },
       {
         "label": "Tailwind",
         "type": "shell",
-        "command": "npx tailwindcss -i ./styles/input.css -o ./styles/main.css --watch",
+        // "command": "while ($true) {npm run build; start-sleep 10}",
+        "command": "npm run build",
         "options": {
           "shell": {
             "executable": "powershell.exe",
@@ -59,7 +64,11 @@
         "problemMatcher": [],
         "presentation": {
           "group": "my-group"
-        }
-      }
+        },
+        "icon": {
+          "id": "eye",
+          "color": "terminal.ansiMagenta"
+        },
+      },
     ]
   }

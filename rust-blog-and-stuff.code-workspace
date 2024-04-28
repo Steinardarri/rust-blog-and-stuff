@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+  ],
+  "settings": {
+    "emmet.includeLanguages": {
+      "rust": "html",
+      "*.rs": "html"
+    },
+    "tailwindCSS.includeLanguages": {
+      "rust": "html",
+      "*.rs": "html"
+    },
+    "files.associations": {
+      "*.rs": "rust"
+    },
+    "rust-analyzer.linkedProjects": [
+      ".\\Cargo.toml"
+    ],
+    "rust-analyzer.check.command": "clippy"
+  }
+}

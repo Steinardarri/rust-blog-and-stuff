@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500">
+  <circle cx="250" cy="250" r="40" stroke="#fff" stroke-width="12" fill="none"/>
+  <g id="a" stroke="#fff" stroke-width="12">
+    <path d="M0 250h250"/>
+    <path d="M5 200c60 0 60 100 0 100" fill="none"/>
+    <path d="M125 215v70M100 215v70M150 215v70"/>
+  </g>
+  <use xlink:href="#a" transform="rotate(45 250 250)"/>
+  <use xlink:href="#a" transform="rotate(90 250 250)"/>
+  <use xlink:href="#a" transform="rotate(135 250 250)"/>
+  <use xlink:href="#a" transform="rotate(180 250 250)"/>
+  <use xlink:href="#a" transform="rotate(-45 250 250)"/>
+  <use xlink:href="#a" transform="rotate(-90 250 250)"/>
+  <use xlink:href="#a" transform="rotate(-135 250 250)"/>
+  
+  <circle cx="250" cy="250" r="40" stroke="#000" stroke-width="6" fill="none"/>
+  <g id="b" stroke="#000" stroke-width="6">
+    <path d="M0 250h250"/>
+    <path d="M5 200c60 0 60 100 0 100" fill="none"/>
+    <path d="M125 215v70M100 215v70M150 215v70"/>
+  </g>
+  <use xlink:href="#b" transform="rotate(45 250 250)"/>
+  <use xlink:href="#b" transform="rotate(90 250 250)"/>
+  <use xlink:href="#b" transform="rotate(135 250 250)"/>
+  <use xlink:href="#b" transform="rotate(180 250 250)"/>
+  <use xlink:href="#b" transform="rotate(-45 250 250)"/>
+  <use xlink:href="#b" transform="rotate(-90 250 250)"/>
+  <use xlink:href="#b" transform="rotate(-135 250 250)"/>
+  
+  <circle cx="250" cy="250" r="40" stroke="#fff" stroke-width="3" fill="none"/>
+  <g id="c" stroke="#fff" stroke-width="3">
+    <path d="M0 250h250"/>
+    <path d="M5 200c60 0 60 100 0 100" fill="none"/>
+    <path d="M125 215v70M100 215v70M150 215v70"/>
+  </g>
+  <use xlink:href="#c" transform="rotate(45 250 250)"/>
+  <use xlink:href="#c" transform="rotate(90 250 250)"/>
+  <use xlink:href="#c" transform="rotate(135 250 250)"/>
+  <use xlink:href="#c" transform="rotate(180 250 250)"/>
+  <use xlink:href="#c" transform="rotate(-45 250 250)"/>
+  <use xlink:href="#c" transform="rotate(-90 250 250)"/>
+  <use xlink:href="#c" transform="rotate(-135 250 250)"/>
+</svg>

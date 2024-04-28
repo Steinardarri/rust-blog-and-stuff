@@ -9,6 +9,7 @@ gloo-utils = "0.2.0"
 serde = { version = "1.0.197", features = ["derive"] }
 serde_yaml = "0.9.32"
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+yew-router = { git = "https://github.com/yewstack/yew.git" }
 
 [profile.release]
 # Less code to include into binary
