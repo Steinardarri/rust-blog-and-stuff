@@ -2,7 +2,7 @@ use yew::prelude::*;
 
 #[function_component]
 pub fn Navbar() -> Html {
-    html! {
+    html!{
         <>
         // Sidebar (desktop)
         <aside id="sidebar" class="group sidebar invisible lg:visible">
