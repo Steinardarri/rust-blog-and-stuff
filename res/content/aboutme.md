@@ -1,1 +1,1 @@
-Hey, I'm Max. I am currently studying data science in Tübingen and working at BearingPoint in data analytics & engineering.
+Halló og velkomin á heimasíðuna mína. Ég er útskrifaður tölvunarfræðingur hjá Háskóla Íslands og er starfandi sem hugbúnaðarverkfræðingur hjá Brennisteinn ehf.
