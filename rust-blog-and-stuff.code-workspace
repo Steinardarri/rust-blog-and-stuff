@@ -1,24 +1,55 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
+  "folders": [
+    {
+      "path": ".",
+    },
   ],
   "settings": {
+    // Node
+    "files.exclude": {
+      "node_modules/": true,
+      ".prettierrc.toml": true,
+      "Cargo.lock": true,
+      "package-lock.json": true,
+    },
+    "search.exclude": {
+      "node_modules/": true,
+      ".prettierrc.toml": true,
+      "Cargo.lock": true,
+      "package-lock.json": true,
+    },
+
+    // Tailwind with Rust
     "emmet.includeLanguages": {
       "rust": "html",
-      "*.rs": "html"
+      "*.rs": "html",
     },
     "tailwindCSS.includeLanguages": {
       "rust": "html",
-      "*.rs": "html"
+      "*.rs": "html",
     },
     "files.associations": {
-      "*.rs": "rust"
+      "*.rs": "rust",
     },
-    "rust-analyzer.linkedProjects": [
-      ".\\Cargo.toml"
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "on",
+      "strings": true,
+    },
+    "css.validate": false,
+
+    // Rust
+    "rust-analyzer.linkedProjects": [".\\Cargo.toml"],
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.check.extraArgs": [
+      "--all-features",
+      "--",
+      "-D warnings",
+      "-W clippy::pedantic",
     ],
-    "rust-analyzer.check.command": "clippy"
-  }
+    "[rust]": {
+      "editor.defaultFormatter": "rust-lang.rust-analyzer",
+      "editor.formatOnSave": true,
+    },
+  },
 }
