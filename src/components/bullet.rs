@@ -3,16 +3,16 @@ use yew::prelude::*;
 
 // Properties to get content and return as bullet for list
 #[derive(Debug, PartialEq, Properties)]
-pub struct BulletProps {
+pub struct Props {
     pub content: String,
     #[prop_or_default]
     pub scale: Option<u8>,
 }
 
 #[function_component]
-pub fn Bullet(props: &BulletProps) -> Html {
+pub fn Bullet(props: &Props) -> Html {
     // Split content string using semicolon as separator
-    let content: Vec<&str> = props.content.split(';').map(|s| s.trim()).collect();
+    let content: Vec<&str> = props.content.split(';').map(str::trim).collect();
 
     // Scale if necessary
     let scale = props.scale.unwrap_or(100);
@@ -31,11 +31,11 @@ pub fn Bullet(props: &BulletProps) -> Html {
         .collect();
 
     // If content found, render
-    if !content.is_empty() {
+    if content.is_empty() {
+        html! {<div />}
+    } else {
         html! {
             <ul class="space-y-2 text-left">{ list_items }</ul>
         }
-    } else {
-        html! {<div />}
     }
 }
