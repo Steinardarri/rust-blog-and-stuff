@@ -1,10 +1,6 @@
 name: Build & Test
 
-on:
-  push:
-    branches: [ "dev" ]
-  pull_request:
-    branches: [ "prod" ]
+on: [push, pull_request]
 
 env:
   CARGO_TERM_COLOR: always
@@ -13,7 +9,9 @@ jobs:
   build_and_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - run: rustup toolchain install stable --profile minimal --no-self-update
+      - uses: Swatinem/rust-cache@v2
       - name: Add wasm32 target
         run: rustup target add wasm32-unknown-unknown
       - name: Install Trunk
@@ -26,13 +24,28 @@ jobs:
   clippy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Clippy
         run: cargo clippy --all-features -- -D warnings
 
   format:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Format
         run: cargo fmt --all -- --check
+
+  tailwind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - name: Install node packages
+        run: npm ci
+      - name: Test packages
+        run: npm test
+      - name: Build Tailwindcss
+        run: npm run build
