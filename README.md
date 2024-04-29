@@ -6,11 +6,6 @@ I used [Max Mohr's](https://github.com/maxjmohr/personal_website) amazing websit
 
 ## How to run
 
-### Quick install if on Linux:
-run `build_release.sh`
-
----
-
 We will need the standard [Rust toolchain](https://www.rust-lang.org/learn/get-started), including `rustup`, `rustc` and `cargo`
 
 Yew uses [WebAssembly](https://webassembly.org) and needs Rust to have it's target
@@ -51,6 +46,14 @@ After that, to install all dependencies listed in package.json
 
 To have Tailwind generate our styles we run 
 
-`npm run css` listens for changes and rebuilds when found (might get an 'JavaScript heap out of memory' error during runtime)
+`npm run css` listens for changes and rebuilds when found (might get a 'JavaScript heap out of memory' error during runtime)
 
 `npm run build` builds a minimal css file
+
+# Building & Deployment
+
+To build for release and deployment, use  
+
+`build_release.sh`
+
+as the bash build command, with `/dist` as the output directory and `/` as the root
