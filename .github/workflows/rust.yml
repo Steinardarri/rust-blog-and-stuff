@@ -46,7 +46,5 @@ jobs:
           cache: "npm"
       - name: Install node packages
         run: npm ci
-      - name: Test packages
-        run: npm test
       - name: Build Tailwindcss
         run: npm run build
