@@ -3,7 +3,7 @@ use yew::prelude::*;
 use crate::components::icons::Icons;
 use crate::safehtml::SafeHtml;
 
-use crate::components::timeline::{Timeline, TimelineEntry};
+use crate::components::timeline::{Entry, Timeline};
 use comrak::{markdown_to_html, Options};
 
 #[function_component]
@@ -20,8 +20,7 @@ pub fn AboutMe() -> Html {
 
     // Iterate over each timeline entry and create TimelineProps
     // Professional experience
-    let content_profexper_entries: Vec<TimelineEntry> =
-        serde_yaml::from_str(content_profexper).unwrap();
+    let content_profexper_entries: Vec<Entry> = serde_yaml::from_str(content_profexper).unwrap();
     let content_profexper_timeline: Vec<Html> = content_profexper_entries
         .iter()
         .map(|entry| {
@@ -39,7 +38,7 @@ pub fn AboutMe() -> Html {
         })
         .collect();
     // Education
-    let content_educ_entries: Vec<TimelineEntry> = serde_yaml::from_str(content_educ).unwrap();
+    let content_educ_entries: Vec<Entry> = serde_yaml::from_str(content_educ).unwrap();
     let content_educ_timeline: Vec<Html> = content_educ_entries
         .iter()
         .map(|entry| {

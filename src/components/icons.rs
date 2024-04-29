@@ -2,35 +2,35 @@ use yew::prelude::*;
 
 // Properties to get icons and scale them
 #[derive(Debug, PartialEq, Properties)]
-pub struct IconsProps {
+pub struct Props {
     pub icons: Vec<String>,
     #[prop_or_default]
     pub scale: Option<u8>,
 }
 
 #[function_component]
-pub fn Icons(props: &IconsProps) -> Html {
+pub fn Icons(props: &Props) -> Html {
     // Convert to lowercase and trim to get icons
     let icons_str: Vec<&str> = props.icons.iter().map(|s| s.trim()).collect();
     let icons: Vec<Html> = icons_str
         .iter()
-        .filter_map(|icon_str| get_icons(icon_str))
+        .filter_map(|icon_str| get(icon_str))
         .collect();
     let scale = props.scale.unwrap_or(100);
 
     // If icons found, render
-    if !icons.is_empty() {
+    if icons.is_empty() {
+        html! {<div />}
+    } else {
         html! {
             <div class={format!("flex flex-wrap items-center justify-center scale-{}", scale)} data-aos="fade">
                 { icons.into_iter().collect::<Html>() }
             </div>
         }
-    } else {
-        html! {<div />}
     }
 }
 
-pub fn get_icons(name: &str) -> Option<Html> {
+pub fn get(name: &str) -> Option<Html> {
     return match name.to_lowercase().as_str() {
         // General
         "bullet" => Some(html! {<Bullet />}),

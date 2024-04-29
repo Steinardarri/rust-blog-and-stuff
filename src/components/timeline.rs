@@ -4,7 +4,7 @@ use yew::prelude::*;
 
 // Define the struct to represent a single timeline entry
 #[derive(Debug, PartialEq, Deserialize)]
-pub struct TimelineEntry {
+pub struct Entry {
     pub title: String,
     pub place: String,
     pub place_url: String,
@@ -16,7 +16,7 @@ pub struct TimelineEntry {
 
 // Properties to get content and return as bullet for list
 #[derive(Debug, PartialEq, Properties)]
-pub struct TimelineProps {
+pub struct Props {
     pub title: String,
     pub place: String,
     pub place_url: String,
@@ -28,7 +28,7 @@ pub struct TimelineProps {
 
 // Timeline entry formatting
 #[function_component]
-pub fn Timeline(props: &TimelineProps) -> Html {
+pub fn Timeline(props: &Props) -> Html {
     html! {
         <div class="relative pl-16 lg:pl-52 py-6 group" data-aos="fade-up">
             <a class="timeline_title">{&props.title}</a>
@@ -39,14 +39,14 @@ pub fn Timeline(props: &TimelineProps) -> Html {
             <div class="flex flex-wrap mt-3 lg:mt-0">
                 {for props.skills.iter().map(|skill| html! { <div class="timeline_skills">{skill}</div> })}
             </div>
-            {if !props.content.is_empty() {
+            {if props.content.is_empty() {
+                html! {}
+            } else {
                 html! {
                     <div class="timeline_desc mt-4 lg:mt-2">
                         <Bullet content={props.content.clone()} />
                     </div>
                 }
-            } else {
-                html! {}
             }}
         </div>
     }
