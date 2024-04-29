@@ -1,6 +1,6 @@
 name: Build & Test
 
-on: [push, pull_request]
+on: pull_request
 
 env:
   CARGO_TERM_COLOR: always
@@ -10,8 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: rustup toolchain install stable --profile minimal --no-self-update
       - uses: Swatinem/rust-cache@v2
+      - name: Setup Rust
+        run: rustup toolchain install stable --profile minimal --no-self-update
       - name: Add wasm32 target
         run: rustup target add wasm32-unknown-unknown
       - name: Install Trunk
@@ -45,5 +46,7 @@ jobs:
           cache: "npm"
       - name: Install node packages
         run: npm ci
+      - name: Test packages
+        run: npm test
       - name: Build Tailwindcss
         run: npm run build
