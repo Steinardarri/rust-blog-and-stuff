@@ -25,7 +25,7 @@ pub fn Navbar() -> Html {
                         <span class="sidebar_span hidden group-hover:block">{"Education"}</span>
                     </a>
                 </li>
-                <li>
+/*                 <li>
                     <a href="#projects" class="flex items-center">
                         <img src="res/images/icons/projects.svg"/>
                         <span class="sidebar_span hidden group-hover:block">{"Projects"}</span>
@@ -36,7 +36,7 @@ pub fn Navbar() -> Html {
                         <img src="res/images/icons/techskills.svg"/>
                         <span class="sidebar_span hidden group-hover:block">{"Technical skills"}</span>
                     </a>
-                </li>
+                </li> */
             </ul>
         </aside>
 
@@ -61,7 +61,7 @@ pub fn Navbar() -> Html {
                         <span class="bottombar_span">{"Education"}</span>
                     </a>
                 </li>
-                <li class="w-28 mx-4">
+/*                 <li class="w-28 mx-4">
                     <a href="#projects" class="flex flex-col items-center">
                         <img src="res/images/icons/projects.svg"/>
                         <span class="bottombar_span">{"Projects"}</span>
@@ -72,7 +72,7 @@ pub fn Navbar() -> Html {
                         <img src="res/images/icons/techskills.svg"/>
                         <span class="bottombar_span">{"Skills"}</span>
                     </a>
-                </li>
+                </li> */
             </ul>
         </aside>
         </>

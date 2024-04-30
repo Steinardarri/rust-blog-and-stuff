@@ -7,16 +7,21 @@
   "settings": {
     // Node
     "files.exclude": {
-      "node_modules/": true,
+      "**/.git": true,
+      "**/node_modules": true,
+      "**/tmp": true,
       ".prettierrc.toml": true,
       "Cargo.lock": true,
       "package-lock.json": true,
     },
     "search.exclude": {
-      "node_modules/": true,
+      "**/.git": true,
+      "**/node_modules": true,
+      "**/tmp": true,
       ".prettierrc.toml": true,
       "Cargo.lock": true,
       "package-lock.json": true,
+      "**/main.css": true,
     },
 
     // Tailwind with Rust
