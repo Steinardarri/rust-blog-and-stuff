@@ -59,7 +59,7 @@
       "--message-format=json",
     ],
     "[rust]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.defaultFormatter": "rust-lang.rust-analyzer",
       "editor.formatOnSave": true,
     },
   },

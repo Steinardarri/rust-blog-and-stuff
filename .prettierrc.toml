@@ -6,8 +6,4 @@ bracketSameLine = true
 
 overrides = [{ files = ["*.rs"], options = { tabWidth = 4 } }]
 
-plugins = [
-  "prettier-plugin-tailwindcss",
-  "prettier-plugin-toml",
-  "prettier-plugin-rust",
-]
+plugins = ["prettier-plugin-tailwindcss", "prettier-plugin-rust"]
