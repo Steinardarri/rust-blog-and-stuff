@@ -1,10 +1,14 @@
 # My personal blog written using [Rust](https://www.rust-lang.org)!
 
+![Preview of Site](.github/preview.png)
+
 This is my personal website I built using [Yew](https://yew.rs) and [TailwindCSS](https://tailwindcss.com/)
 
 I used [Max Mohr's](https://github.com/maxjmohr/personal_website) amazing website project as a template
 
 ## How to run
+
+### Rust, Yew & Trunk
 
 We will need the standard [Rust toolchain](https://www.rust-lang.org/learn/get-started), including `rustup`, `rustc` and `cargo`
 
@@ -34,7 +38,7 @@ To build for release
 
 `trunk build --release`
 
-## TailwindCSS
+### TailwindCSS
 
 This project uses Tailwind to manage styles and Prettier to format the CSS
 
@@ -50,7 +54,7 @@ To have Tailwind generate our styles we run
 
 `npm run build` builds a minimal css file
 
-# Building & Deployment
+## Building & Deployment
 
 To build for release and deployment, use  
 
