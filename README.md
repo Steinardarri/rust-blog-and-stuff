@@ -48,7 +48,7 @@ After that, to install all dependencies listed in package.json
 
 `npm install`
 
-To have Tailwind generate our styles we run 
+To have Tailwind generate our styles we run
 
 `npm run css` listens for changes and rebuilds when found (might get a 'JavaScript heap out of memory' error during runtime)
 
@@ -56,7 +56,7 @@ To have Tailwind generate our styles we run
 
 ## Building & Deployment
 
-To build for release and deployment, use  
+To build for release and deployment, use
 
 `build_release.sh`
 

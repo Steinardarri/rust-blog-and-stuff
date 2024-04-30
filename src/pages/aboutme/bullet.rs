@@ -1,5 +1,6 @@
-use crate::components::icons::Icons;
 use yew::prelude::*;
+
+use super::icons::Icons;
 
 // Properties to get content and return as bullet for list
 #[derive(Debug, PartialEq, Properties)]

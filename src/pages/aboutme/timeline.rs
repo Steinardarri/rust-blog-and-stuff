@@ -1,6 +1,8 @@
-use crate::components::bullet::Bullet;
-use serde::Deserialize;
 use yew::prelude::*;
+
+use super::bullet::Bullet;
+
+use serde::Deserialize;
 
 // Define the struct to represent a single timeline entry
 #[derive(Debug, PartialEq, Deserialize)]

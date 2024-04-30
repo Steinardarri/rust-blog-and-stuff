@@ -10,7 +10,7 @@
       "**/.git": true,
       "**/node_modules": true,
       "**/tmp": true,
-      ".prettierrc.toml": true,
+      // ".prettierrc.toml": true,
       "Cargo.lock": true,
       "package-lock.json": true,
     },
@@ -35,25 +35,31 @@
     },
     "files.associations": {
       "*.rs": "rust",
+      "*.css": "tailwindcss",
     },
     "editor.quickSuggestions": {
       "other": "on",
       "comments": "on",
-      "strings": true,
+      "strings": "on",
     },
     "css.validate": false,
 
     // Rust
     "rust-analyzer.linkedProjects": [".\\Cargo.toml"],
-    "rust-analyzer.check.command": "clippy",
-    "rust-analyzer.check.extraArgs": [
+    "rust-analyzer.check.overrideCommand": [
+      "cargo",
+      "+nightly",
+      "clippy",
+      "--workspace",
+      "--all-targets",
       "--all-features",
-      "--",
-      "-D warnings",
-      "-W clippy::pedantic",
+      "--tests",
+      "--examples",
+      "--benches",
+      "--message-format=json",
     ],
     "[rust]": {
-      "editor.defaultFormatter": "rust-lang.rust-analyzer",
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
       "editor.formatOnSave": true,
     },
   },
