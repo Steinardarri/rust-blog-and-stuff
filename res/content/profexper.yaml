@@ -2,7 +2,7 @@
   place: Brennisteinn ehf, Reykjavík
   place_url: https://www.brennisteinn.is
   time: maí, 2024 - dagsins í dag
-  skills: [Stofnun Verkefnis, Hugbúnaðarþróun, Vefsíðugerð]
+  skills: [Verkefnisupphaf & Áætlun, Hugbúnaðarþróun, Vefsíðugerð]
   color: after:bg-sky-700
   content: |
 
@@ -10,10 +10,10 @@
   place: Upplýsingatæknisvið - Háskóli Íslands, Reykjavík
   place_url: https://www.hi.is/haskolinn/upplysingataeknisvid
   time: mars, 2022 - okt, 2022
-  skills: [Hugbúnaðarþróun, Vefsíðugerð, Gangandi Framleiðsla]
+  skills: [Hugbúnaðarþróun, Vefsíðugerð, Gangandi Framleiðsla, IT]
   color: after:bg-sky-600
   content: |
-    Var í starfsnámi í eina önn, fékk svo sumarsamning til að vinna lengur;
+    Starfsnám í eina önn, fékk svo sumarsamning til að vinna lengur;
     Vann við verkefni tengd aðal hugbúnaði HÍ, Uglu, í PHP, SQL, React & JavaScript;
     Lærði helling af hlutum tengd hugbúnaðarþróun eins og Scrum verkferlið í Jira og skilvirkni í Git
 
@@ -21,7 +21,8 @@
   place: Tölvunarfræðisvið - Háskóli Íslands, Reykjavík
   place_url: https://www.hi.is/tolvunarfraedi
   time: 2018 - 2020
-  skills: [Kóðarýni]
+  skills: [IT, Kóðarýni]
   color: after:bg-sky-500
   content: |
-    Vann í þrjár annir. Tölvunarfræði 1, Stærðfræði og reiknifræði, Forritunarmál
+    Þrjár annir;
+    Tölvunarfræði 1, Stærðfræði og reiknifræði, Forritunarmál

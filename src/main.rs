@@ -1,16 +1,14 @@
 mod components {
-    pub mod aboutme;
-    pub mod bullet;
     pub mod footer;
-    pub mod icons;
     pub mod navbar;
-    pub mod timeline;
 }
-mod safehtml;
+mod pages {
+    pub mod aboutme;
+}
 
-use crate::components::aboutme::AboutMe;
 use crate::components::footer::Footer;
 use crate::components::navbar::Navbar;
+use crate::pages::aboutme::AboutMe;
 
 use yew::prelude::*;
 
