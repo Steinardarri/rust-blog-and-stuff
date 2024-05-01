@@ -1051,6 +1051,7 @@ dependencies = [
  "gloo-utils 0.2.0",
  "serde",
  "serde_yaml",
+ "web-sys",
  "yew",
  "yew-router",
 ]

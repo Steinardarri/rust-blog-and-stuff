@@ -10,6 +10,7 @@ serde = { version = "1.0.197", features = ["derive"] }
 serde_yaml = "0.9.32"
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
 yew-router = { git = "https://github.com/yewstack/yew.git" }
+web-sys = { version = "0.3.61", features = ["ScrollToOptions", "Window"] }
 
 [profile.release]
 # Less code to include into binary
@@ -20,3 +21,7 @@ codegen-units = 1
 opt-level = 'z'
 # Link time optimization using using whole-program analysis
 lto = true
+
+
+# Other useful stuff
+# Icons - https://www.svgrepo.com/collection/dazzle-line-icons/4

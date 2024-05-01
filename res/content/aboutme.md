@@ -1,1 +1,1 @@
-Halló og velkomin á heimasíðuna mína. Ég er útskrifaður tölvunarfræðingur hjá Háskóla Íslands og er starfandi sem hugbúnaðarverkfræðingur hjá Brennisteinn ehf.
+Halló og velkomin á heimasíðuna mína. Ég er útskrifaður tölvunarfræðingur frá Háskóla Íslands og er starfandi sem hugbúnaðarverkfræðingur hjá Brennisteinn ehf.
