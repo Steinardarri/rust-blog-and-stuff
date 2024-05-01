@@ -16,11 +16,11 @@ pub fn Footer() -> Html {
                 </a>
             </div>
             <p class="antialiased text-xl lg:text-md text-gray-700 dark:text-stone-200 text-center font-lg lg:font-medium pt-4 lg:pt-0 px-20">{
-            "I constructed this website on the basis of the "}
-            <a href="https://yew.rs" target="_blank" class="italic lg:hover:font-bold">{"yew.rs"}</a>
-            {" framework. It is in constant development. For more technical insights feel free to access the "}
-            <a href="https://github.com/steinardarri/rust-blog-and-stuff" target="_blank" class="italic lg:hover:font-bold">{"GitHub repository"}</a>
-            {"."}
+            "Ég bjó til þessa síðu með  "}
+            <a href="https://yew.rs" target="_blank" class="italic lg:hover:underline decoration-sky-600/70">{"Yew"}</a>
+            {" vinnupallinum. Hún er í stöðugri þróun. Ekki hika við að skoða "}
+            <a href="https://github.com/steinardarri/rust-blog-and-stuff" target="_blank" class="italic lg:hover:underline decoration-sky-600/70">{"GitHub geymsluna"}</a>
+            {" fyrir tæknilegar upplýsingar um síðuna."}
             </p>
         </div>
     }

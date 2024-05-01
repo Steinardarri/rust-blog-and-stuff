@@ -23,7 +23,10 @@ body {
 
 /* Navbar - Header  */
 .topbar {
-  @apply inset-x-0 top-0 z-50 mx-12 mt-12 flex h-32 w-auto flex-row items-center justify-center rounded-3xl bg-white bg-opacity-20 px-2 backdrop-blur-lg dark:bg-black dark:bg-opacity-25;
+  @apply inset-x-0 top-0 z-50 mx-12 mt-12 pb-2 pt-2 flex w-auto flex-row items-center justify-center rounded-3xl bg-white bg-opacity-20 px-2 backdrop-blur-lg dark:bg-black dark:bg-opacity-25;
+}
+.topbar_links li:hover {
+  @apply cursor-pointer rounded-lg bg-white bg-opacity-80 dark:bg-black dark:bg-opacity-25;
 }
 .topbar_svg {
   @apply flex h-20 w-20 fill-gray-700 p-2 dark:fill-stone-200;
@@ -32,12 +35,9 @@ body {
   @apply pt-1 text-center align-middle text-2xl font-semibold text-gray-700 antialiased dark:text-stone-200;
 }
 
-/* Navbar - About Me Sidebar */
+/* Navbar - About Me Sidebar - Desktop */
 .sidebar {
   @apply fixed left-4 top-1/2 z-50 flex h-auto w-28 -translate-y-1/2 transform flex-col items-center rounded-3xl bg-white bg-opacity-20 pb-2 pt-2 backdrop-blur-lg dark:bg-black dark:bg-opacity-25;
-}
-.sidebar:hover {
-  @apply w-[21rem] duration-300;
 }
 .sidebar_links {
   @apply h-max list-none overflow-y-hidden;
@@ -46,24 +46,18 @@ body {
   display: none;
 }
 .sidebar_links li:hover {
-  @apply w-[20rem] cursor-pointer rounded-lg bg-white bg-opacity-80 dark:bg-black dark:bg-opacity-25;
+  @apply cursor-pointer rounded-lg bg-white bg-opacity-80 dark:bg-black dark:bg-opacity-25;
 }
 .sidebar_svg {
   @apply flex h-16 w-16 fill-gray-700 p-2 dark:fill-stone-200;
 }
-.sidebar_span {
-  @apply pl-1 align-middle text-xl font-semibold text-gray-700 antialiased dark:text-stone-200;
-}
 
-/* Navbar Small - About Me Bottombar */
+/* Navbar Small - About Me Bottombar - Mobile */
 .bottombar {
   @apply fixed inset-x-0 bottom-0 z-50 mx-12 mb-12 flex h-32 w-auto flex-row items-center justify-center rounded-3xl bg-white bg-opacity-20 px-2 backdrop-blur-lg dark:bg-black dark:bg-opacity-25;
 }
 .bottombar_svg {
   @apply flex h-20 w-20 fill-gray-700 p-2 dark:fill-stone-200;
-}
-.bottombar_span {
-  @apply pt-1 text-center align-middle text-2xl font-semibold text-gray-700 antialiased dark:text-stone-200;
 }
 
 /*Content specific classes*/
@@ -74,7 +68,7 @@ body {
   @apply mb-3 mt-2 inline-block text-6xl font-semibold text-gray-700 text-opacity-90 lg:mb-1 lg:mt-0 lg:text-4xl dark:text-stone-200 dark:text-opacity-90;
 }
 .timeline_time {
-  @apply left-0 mt-0 inline-flex h-12 w-[21rem] translate-y-0.5 items-center justify-center rounded-2xl bg-white bg-opacity-50 text-3xl font-semibold uppercase text-stone-600 lg:absolute lg:h-10 lg:w-40 lg:text-sm dark:bg-black dark:bg-opacity-25 dark:text-neutral-300;
+  @apply left-0 mt-0 p-4 inline-flex h-12 w-[16rem] translate-y-0.5 items-center justify-center rounded-2xl bg-white bg-opacity-50 text-3xl font-semibold uppercase text-stone-600 lg:absolute lg:h-10 lg:w-40 lg:text-sm dark:bg-black dark:bg-opacity-25 dark:text-neutral-300;
 }
 .timeline_desc {
   @apply text-4xl text-stone-600 lg:text-xl dark:text-neutral-300;

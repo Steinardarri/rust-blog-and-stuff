@@ -64,6 +64,7 @@ pub fn AboutMe() -> Html {
     html! {
     <>
     <AboutNavbar />
+
     // About Me
     <div id="aboutme" class="flex flex-col justify-center bg-gradient-to-b from-fuchsia-300 to-violet-300 dark:from-fuchsia-600 dark:to-violet-700 pl-12 lg:pl-44 pr-20 w-full h-full">
         <h1 class="manual_h1">{"Steinar Darri Þorgilsson"}</h1>
@@ -93,6 +94,7 @@ pub fn AboutMe() -> Html {
         <h1 class="text-8xl lg:text-7xl manual_h1" data-aos="fade">{"Menntun"}</h1>
         { for content_educ_timeline.iter().cloned() }
     </div>
+
     /*  // Technical skills
     <div id="techskills" class="bg-gradient-to-b from-teal-200 to-cyan-400 dark:from-teal-800 dark:to-indigo-900 pt-28 pb-14 pl-12 lg:pl-44 pr-20">
         <h1 class="text-8xl lg:text-7xl manual_h1" data-aos="fade">{"Technical skills"}</h1>
