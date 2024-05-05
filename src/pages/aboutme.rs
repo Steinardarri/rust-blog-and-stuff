@@ -66,40 +66,46 @@ pub fn AboutMe() -> Html {
     <AboutNavbar />
 
     // About Me
-    <div id="aboutme" class="flex flex-col justify-center bg-gradient-to-b from-fuchsia-300 to-violet-300 dark:from-fuchsia-600 dark:to-violet-700 pl-12 lg:pl-44 pr-20 w-full h-full">
+    <div id="aboutme" class="flex flex-col justify-center bg-gradient-to-b from-nord10 to-nord7 dark:from-nord15 dark:to-nord10 pl-12 lg:pl-44 pr-20 w-full h-full">
         <h1 class="manual_h1">{"Steinar Darri Þorgilsson"}</h1>
-        <div class="flex mb-6">
-            <a id="linkedin" href="https://www.linkedin.com/in/steinardarri/" target="_blank" class="mr-6 lg:mr-4">
-                <img src="res/images/icons/linkedin.svg" width="36" height="24" />
-            </a>
-            <a id="github" href="https://github.com/steinardarri" target="_blank" class="mr-6 lg:mr-4">
-                <img src="res/images/icons/github.svg" width="24" height="24" />
-            </a>
-            <a id="email" href="mailto:Steinar@steinardth.xyz" class="mr-6 lg:mr-4">
-                <img src="res/images/icons/email.svg" width="24" height="24" />
-            </a>
-        </div>
+        <ul class="flex flex-row h-min w-auto mb-6">
+            <li class="mx-1">
+                <a id="linkedin" href="https://www.linkedin.com/in/steinardarri/" target="_blank">
+                    <img src="res/images/icons/linkedin.svg" width="36" height="24" />
+                </a>
+            </li>
+            <li class="mx-1">
+                <a id="github" href="https://github.com/steinardarri" target="_blank">
+                    <img src="res/images/icons/github.svg" width="24" height="24" />
+                </a>
+            </li>
+            <li class="mx-1">
+                <a id="email" href="mailto:Steinar@steinardth.xyz">
+                    <img src="res/images/icons/email.svg" width="24" height="24" />
+                </a>
+            </li>
+        </ul>
         <span class="type-aboutme font-mono antialiased text-5xl lg:text-3xl font-medium
-        tracking-normal text-wrap text-stone-600 dark:text-neutral-300 leading-tight lg:leading-snug"></span>
+        tracking-normal text-wrap text-nord2 dark:text-nord5 leading-tight lg:leading-snug"></span>
     </div>
 
     // Professional experience
-    <div id="profexper" class="bg-gradient-to-b from-violet-300 to-green-100 dark:from-violet-700 dark:to-emerald-900 pt-28 pb-10 pl-12 lg:pl-44 pr-20">
+    <div id="profexper" class="bg-gradient-to-b from-nord7 to-nord14 dark:from-nord10 dark:to-nord8 pt-28 pb-10 pl-12 lg:pl-44 pr-20">
         <h1 class="text-8xl lg:text-7xl manual_h1" data-aos="fade">{"Starfsreynsla"}</h1>
         { for content_profexper_timeline.iter().cloned() }
     </div>
 
     // Education
-    <div id="educ" class="bg-gradient-to-b from-green-100 to-teal-200 dark:from-emerald-900 dark:to-teal-800 pt-28 pb-14 pl-12 lg:pl-44 pr-20">
+    <div id="educ" class="bg-gradient-to-b from-nord14 to-nord13 dark:from-nord8 dark:to-nord3 pt-28 pb-14 pl-12 lg:pl-44 pr-20">
         <h1 class="text-8xl lg:text-7xl manual_h1" data-aos="fade">{"Menntun"}</h1>
         { for content_educ_timeline.iter().cloned() }
     </div>
 
     /*  // Technical skills
-    <div id="techskills" class="bg-gradient-to-b from-teal-200 to-cyan-400 dark:from-teal-800 dark:to-indigo-900 pt-28 pb-14 pl-12 lg:pl-44 pr-20">
+    <div id="techskills" class="bg-gradient-to-b from-nord13 to-nord12 dark:from-nord3 dark:to-nord1 pt-28 pb-14 pl-12 lg:pl-44 pr-20">
         <h1 class="text-8xl lg:text-7xl manual_h1" data-aos="fade">{"Technical skills"}</h1>
         <div class="flex flex-col items-center">
-            <span class="text-gray-700 dark:text-stone-200 text-opacity-90 dark:text-opacity-90 text-7xl lg:text-5xl font-semibold mb-6 lg:mb-4 text-center" data-aos="fade">{"Programming languages"}</span>
+            <span class="text-nord1 dark:text-nord4 text-opacity-90 dark:text-opacity-90 text-7xl lg:text-5xl font-semibold mb-6 lg:mb-4 text-center" data-aos="fade">{"Programming languages"}</span>
             <Icons icons={vec![
                 "matlab".to_string(),
                 "python".to_string(),
@@ -107,7 +113,7 @@ pub fn AboutMe() -> Html {
                 "sql".to_string(),
                 "stata".to_string()
             ]}/>
-            <span class="text-gray-700 dark:text-stone-200 text-opacity-90 dark:text-opacity-90 text-7xl lg:text-5xl font-semibold mt-10 lg:mt-6 mb-6 lg:mb-4 text-center" data-aos="fade">{"Frameworks & libraries"}</span>
+            <span class="text-nord1 dark:text-nord4 text-opacity-90 dark:text-opacity-90 text-7xl lg:text-5xl font-semibold mt-10 lg:mt-6 mb-6 lg:mb-4 text-center" data-aos="fade">{"Frameworks & libraries"}</span>
             <Icons icons={vec![
                 "arrow".to_string(),
                 "dash".to_string(),
@@ -122,7 +128,7 @@ pub fn AboutMe() -> Html {
                 "spark".to_string(),
                 "yew".to_string()
             ]}/>
-            <span class="text-gray-700 dark:text-stone-200 text-opacity-90 dark:text-opacity-90 text-7xl lg:text-5xl font-semibold mt-10 lg:mt-6 mb-6 lg:mb-4 text-center" data-aos="fade">{"Tools"}</span>
+            <span class="text-nord1 dark:text-nord4 text-opacity-90 dark:text-opacity-90 text-7xl lg:text-5xl font-semibold mt-10 lg:mt-6 mb-6 lg:mb-4 text-center" data-aos="fade">{"Tools"}</span>
             <Icons icons={vec![
                 "atlassian".to_string(),
                 "css".to_string(),

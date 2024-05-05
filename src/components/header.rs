@@ -3,8 +3,8 @@ use yew::prelude::*;
 #[function_component]
 pub fn Navbar() -> Html {
     html! {
-        <nav id="navbar is-primary" role="navigation" aria-label="main navigation" class="group topbar visible">
-            <ul class="flex flex-row h-min w-auto mx-2">
+        <nav id="navbar is-primary" role="navigation" aria-label="main navigation" class="topbar visible">
+            <ul class="flex flex-row h-min w-auto mx-2 topbar_links">
                 <li class="w-28 mx-4">
                     <a href="/" class="flex flex-col items-center">
                         <img src="res/images/icons/home.svg" width="96" height="96" />
