@@ -66,7 +66,7 @@ pub fn AboutMe() -> Html {
     <AboutNavbar />
 
     // About Me
-    <div id="aboutme" class="flex flex-col justify-center bg-gradient-to-b from-nord10 to-nord7 dark:from-nord15 dark:to-nord10 pl-12 lg:pl-44 pr-20 w-full h-full">
+    <div id="aboutme" class="flex flex-col justify-center bg-gradient-to-b from-nord12 to-nord7 dark:from-nord15 dark:to-nord10 pl-12 lg:pl-44 pr-20 w-full h-full">
         <h1 class="manual_h1">{"Steinar Darri Þorgilsson"}</h1>
         <ul class="flex flex-row h-min w-auto mb-6">
             <li class="mx-1">
@@ -90,19 +90,19 @@ pub fn AboutMe() -> Html {
     </div>
 
     // Professional experience
-    <div id="profexper" class="bg-gradient-to-b from-nord7 to-nord14 dark:from-nord10 dark:to-nord8 pt-28 pb-10 pl-12 lg:pl-44 pr-20">
+    <div id="profexper" class="bg-gradient-to-b from-nord7 to-nord14 dark:from-nord10 dark:to-nord3 pt-28 pb-10 pl-12 lg:pl-44 pr-20">
         <h1 class="text-8xl lg:text-7xl manual_h1" data-aos="fade">{"Starfsreynsla"}</h1>
         { for content_profexper_timeline.iter().cloned() }
     </div>
 
     // Education
-    <div id="educ" class="bg-gradient-to-b from-nord14 to-nord13 dark:from-nord8 dark:to-nord3 pt-28 pb-14 pl-12 lg:pl-44 pr-20">
+    <div id="educ" class="bg-gradient-to-b from-nord14 to-nord13 dark:from-nord3 dark:to-nord2 pt-28 pb-14 pl-12 lg:pl-44 pr-20">
         <h1 class="text-8xl lg:text-7xl manual_h1" data-aos="fade">{"Menntun"}</h1>
         { for content_educ_timeline.iter().cloned() }
     </div>
 
     /*  // Technical skills
-    <div id="techskills" class="bg-gradient-to-b from-nord13 to-nord12 dark:from-nord3 dark:to-nord1 pt-28 pb-14 pl-12 lg:pl-44 pr-20">
+    <div id="techskills" class="bg-gradient-to-b from-nord13 to-nord5 dark:from-nord2 dark:to-nord1 pt-28 pb-14 pl-12 lg:pl-44 pr-20">
         <h1 class="text-8xl lg:text-7xl manual_h1" data-aos="fade">{"Technical skills"}</h1>
         <div class="flex flex-col items-center">
             <span class="text-nord1 dark:text-nord4 text-opacity-90 dark:text-opacity-90 text-7xl lg:text-5xl font-semibold mb-6 lg:mb-4 text-center" data-aos="fade">{"Programming languages"}</span>
