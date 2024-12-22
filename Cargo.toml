@@ -1,27 +1,8 @@
 [package]
-name = "personal_website"
+name = "rust-blog-and-stuff"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-comrak = "0.23.0"
-gloo-utils = "0.2.0"
-serde = { version = "1.0.197", features = ["derive"] }
-serde_yaml = "0.9.32"
-yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
-yew-router = { git = "https://github.com/yewstack/yew.git" }
-web-sys = { version = "0.3.61", features = ["ScrollToOptions", "Window"] }
-
-[profile.release]
-# Less code to include into binary
-panic = 'abort'
-# Optimization over all codebase ( better optimization, slower build )
-codegen-units = 1
-# Optimization for size ( more aggressive )
-opt-level = 'z'
-# Link time optimization using using whole-program analysis
-lto = true
-
-
-# Other useful stuff
-# Icons - https://www.svgrepo.com/collection/dazzle-line-icons/4
+console_error_panic_hook = "0.1.7"
+leptos = { version = "0.6.15", features = ["csr", "nightly"] }

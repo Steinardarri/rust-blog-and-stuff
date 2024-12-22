@@ -10,15 +10,19 @@
   "tasks": [
     {
       "label": "Serve Website",
-      "dependsOn": ["Trunk", "Tailwind", "Clippy", "Format"],
-      // Mark as the default build task so cmd/ctrl+shift+b will create them
+      "dependsOn": ["Trunk", "Clippy", "Format"],
+      // Mark as the default build task so ctrl+shift+b will create them
       "group": {
         "kind": "build",
         "isDefault": true
       },
-      // Try start the task on folder open
-      "runOptions": {
-        "runOn": "folderOpen"
+      // // Try start the task on folder open
+      // "runOptions": {
+      //   "runOn": "folderOpen"
+      // },
+      "icon": {
+        "id": "browser",
+        "color": "terminal.ansiMagenta"
       }
     },
     {
@@ -27,19 +31,13 @@
       // The task will launch a shell
       "type": "shell",
       "command": "trunk serve",
-      // Set the shell type
-      "options": {
-        "shell": {
-          "executable": "powershell.exe",
-          "args": []
-        }
-      },
+      // Set the shell type,
       // Mark as a background task to avoid the spinner animation on the terminal tab
       "isBackground": true,
       "problemMatcher": [],
       // Create the tasks in a terminal group
       "presentation": {
-        "group": "my-group"
+        "group": "trunk-group"
       },
       "icon": {
         "id": "server-process",
@@ -47,40 +45,13 @@
       }
     },
     {
-      "label": "Tailwind",
-      "type": "shell",
-      // "command": "while ($true) {npm run build; start-sleep 10}",
-      "command": "npm run build",
-      "options": {
-        "shell": {
-          "executable": "powershell.exe",
-          "args": []
-        }
-      },
-      "isBackground": true,
-      "problemMatcher": [],
-      "presentation": {
-        "group": "my-group"
-      },
-      "icon": {
-        "id": "eye",
-        "color": "terminal.ansiMagenta"
-      }
-    },
-    {
       "label": "Clippy",
       "type": "shell",
       "command": "cargo clippy --all-features -- -D warnings -W clippy::pedantic",
-      "options": {
-        "shell": {
-          "executable": "powershell.exe",
-          "args": []
-        }
-      },
       "isBackground": true,
       "problemMatcher": [],
       "presentation": {
-        "group": "my-group"
+        "group": "trunk-group"
       },
       "icon": {
         "id": "clippy",
@@ -91,16 +62,10 @@
       "label": "Format",
       "type": "shell",
       "command": "cargo fmt --all -- --check",
-      "options": {
-        "shell": {
-          "executable": "powershell.exe",
-          "args": []
-        }
-      },
       "isBackground": true,
       "problemMatcher": [],
       "presentation": {
-        "group": "my-group"
+        "group": "trunk-group"
       },
       "icon": {
         "id": "search",

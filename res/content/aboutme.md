@@ -1,1 +1,0 @@
-Halló og velkomin á heimasíðuna mína. Ég er útskrifaður tölvunarfræðingur frá Háskóla Íslands og er starfandi sem hugbúnaðarverkfræðingur hjá Brennisteinn ehf.
